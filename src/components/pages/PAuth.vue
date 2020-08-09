@@ -1,5 +1,5 @@
 <template lang="pug">
-  t-auth( :backgroundUrl="backgroundUrl" )
+  t-auth( :backgroundUrl="backgroundUrl")
 </template>
 
 <script>

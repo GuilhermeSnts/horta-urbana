@@ -1,5 +1,5 @@
 <template lang="pug">
-  button.a-btn.ripple
+  button.a-btn.ripple( @click="$emit('click')")
     .icon.mdi(:class="icon")
     .label {{label}}
 </template>
