@@ -1,7 +1,13 @@
 {
-  "name": "app",
+  "name": "hortaurbana",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": {
+    "name": "Guilherme Santos",
+    "email": "guilhermess1994@gmail.com",
+    "url": "https://github.com/GuilhermeSnts"
+  },
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
