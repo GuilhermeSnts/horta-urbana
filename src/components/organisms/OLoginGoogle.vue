@@ -20,7 +20,7 @@ export default {
     SignIn() {
       this.SIGN_IN_WITH_GOOGLE()
         .then(() => {
-          this.$router.push({ name: "Home" });
+          this.$router.push({ name: "Dashboard" });
         })
         .catch(err => alert(err.message));
     }

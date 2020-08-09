@@ -6,9 +6,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Dashboard",
     component: () =>
-      import(/* webpackChunkName: "home" */ "../components/pages/PHome.vue"),
+      import(
+        /* webpackChunkName: "dashboard" */ "../components/pages/PDashboard.vue"
+      ),
     meta: {
       requiresAuth: true
     }
