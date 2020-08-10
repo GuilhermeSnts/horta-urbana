@@ -1,12 +1,13 @@
 <template lang="pug">
   a-page.center( :backgroundUrl="backgroundUrl" )
-    div Dashboard
+    a-title Dashboard
     m-horizontal-menu( :items="pagesMenu")
 
 </template>
 
 <script>
 import APage from "../atoms/APage";
+import ATitle from "../atoms/ATitle";
 import MHorizontalMenu from "../molecules/MHorizontalMenu";
 
 export default {
@@ -14,6 +15,7 @@ export default {
 
   components: {
     APage,
+    ATitle,
     MHorizontalMenu
   },
 
