@@ -21,5 +21,7 @@ export default {
   background-position: center
   background-repeat: none
   background-size: cover
+  background-attachment: fixed
   padding: 1em
+  overflow-x: scroll
 </style>
