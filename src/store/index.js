@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
 
 // Modules
 
@@ -11,5 +12,6 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   namespaced: true,
-  modules: { auth, user }
+  modules: { auth, user },
+  plugins: [createPersistedState()]
 });
