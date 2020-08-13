@@ -6,12 +6,13 @@ import createPersistedState from "vuex-persistedstate";
 
 import auth from "./modules/auth";
 import user from "./modules/user";
+import plants from "./modules/plants";
 
 // Vuex
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   namespaced: true,
-  modules: { auth, user },
+  modules: { auth, user, plants },
   plugins: [createPersistedState()]
 });

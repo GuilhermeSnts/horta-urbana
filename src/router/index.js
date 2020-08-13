@@ -16,6 +16,17 @@ const routes = [
     }
   },
   {
+    path: "/plants",
+    name: "Plants",
+    component: () =>
+      import(
+        /* webpackChunkName: "plants" */ "../components/pages/PPlants.vue"
+      ),
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
     path: "/auth",
     name: "Auth",
     component: () =>
