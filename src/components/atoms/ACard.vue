@@ -1,6 +1,6 @@
 <template lang="pug">
     .a-card
-      .title
+      .title(v-if="$slots.title")
         slot( name="title")
       slot
 </template>
@@ -22,9 +22,9 @@ export default {
   background: $white
   box-shadow: 0px 10px 10px $black-transparent
   .title
+    margin-top: 10px
+    margin-bottom: 50px
     font-weight: bold
     font-size: 1em
-    margin-top: 10px
-    margin-bottom: 45px
     font-family: 'Merriweather', serif
 </style>
