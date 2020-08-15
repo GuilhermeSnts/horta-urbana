@@ -1,5 +1,5 @@
 <template lang="pug">
-  t-plants( :backgroundUrl="backgroundUrl", :plants="PLANTS")
+  t-plants( :backgroundUrl="backgroundUrl", :plants="PLANTS" :categories="categories")
 
 </template>
 
@@ -12,11 +12,32 @@ export default {
   name: "PPlants",
 
   data: () => ({
-    backgroundUrl
+    backgroundUrl,
+
+    categories: [
+      {
+        label: "Vegetables",
+        path: "/plants/vegetables",
+        background:
+          "https://images.unsplash.com/photo-1518843875459-f738682238a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+      },
+      {
+        label: "Ornamentals",
+        path: "/plants/ornamental",
+        background:
+          "https://images.unsplash.com/photo-1475872711536-95ec04b9d290?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=60"
+      },
+      {
+        label: "Fruitful",
+        path: "/plants/fruitful",
+        background:
+          "https://images.unsplash.com/photo-1521368621301-177527413db1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+      }
+    ]
   }),
 
   computed: {
-    ...mapGetters("plants", ["PLANTS"])
+    ...mapGetters("plants", ["PLANTS", "CATEGORIES"])
   },
 
   methods: {

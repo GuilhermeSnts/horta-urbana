@@ -1,7 +1,13 @@
 <template lang="pug">
   a-page.center( :backgroundUrl="backgroundUrl" )
     a-title Plants
-    o-plant-list( :plants="plants")
+
+    o-search-plant(caption="Search your plants")
+    
+    a-title(size="subtitle") Discover by Category
+    m-horizontal-menu( :items="categories")
+
+    o-plant-list( :plants="plants" caption="Discover new Plants")
 
 </template>
 
@@ -9,6 +15,9 @@
 import APage from "../atoms/APage";
 import ATitle from "../atoms/ATitle";
 import OPlantList from "../organisms/OPlantList";
+import OSearchPlant from "../organisms/OSearchPlant";
+import MHorizontalMenu from "../molecules/MHorizontalMenu";
+import MSearch from "../molecules/MSearch";
 
 export default {
   name: "TDashboard",
@@ -16,12 +25,16 @@ export default {
   components: {
     APage,
     ATitle,
-    OPlantList
+    OPlantList,
+    OSearchPlant,
+    MHorizontalMenu,
+    MSearch
   },
 
   props: {
     backgroundUrl: String,
-    plants: Array
+    plants: Array,
+    categories: Array
   }
 };
 </script>
