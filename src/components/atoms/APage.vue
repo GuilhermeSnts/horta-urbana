@@ -23,5 +23,5 @@ export default {
   background-size: cover
   background-attachment: fixed
   padding: 1em
-  overflow-x: scroll
+  overflow-y: scroll
 </style>
