@@ -1,5 +1,5 @@
 <template lang="pug">
-    .a-card
+    .a-card(@click="$emit('click')")
       .title(v-if="$slots.title")
         slot( name="title")
       slot
