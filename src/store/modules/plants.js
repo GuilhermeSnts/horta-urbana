@@ -33,6 +33,21 @@ export default {
             reject(err);
           });
       });
+    },
+    GET_PLANT_BY_ID(context, payload) {
+      return new Promise((resolve, reject) => {
+        axios(
+          `https://trefle.io/api/v1/plants/${payload}?token=${process.env.VUE_APP_TREFLE_TOKEN}`
+        )
+          .then(res => {
+            console.log(res.data);
+            resolve(res.data);
+          })
+          .catch(err => {
+            console.log(err);
+            reject(err);
+          });
+      });
     }
   }
 };

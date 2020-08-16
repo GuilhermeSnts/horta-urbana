@@ -6,7 +6,8 @@
         :key="index",
         :common_name="item.common_name",
         :scientific_name="item.scientific_name"
-        :image_url="item.image_url")
+        :image_url="item.image_url"
+        :id="item.id")
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-    a-card.m-plant-item
+    a-card.m-plant-item(@click="goTo(id)")
       .picture( :style="{ 'background-image': `url(${image_url})` }")
       .data
         .common-name {{ common_name }}
@@ -18,18 +18,25 @@ export default {
     ACard
   },
 
+  methods: {
+    goTo(id) {
+      this.$router.push("plant/info/" + id);
+    }
+  },
+
   props: {
     common_name: String,
     family: String,
     scientific_name: String,
-    image_url: String
+    image_url: String,
+    id: Number
   }
 };
 </script>
 
 <style lang="sass" scoped>
 .m-plant-item
-  margin-bottom: 10px
+  margin-bottom: 20px
   display: flex
   flex-flow: row
   .picture

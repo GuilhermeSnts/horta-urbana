@@ -1,0 +1,8 @@
+#*TITLE: Plant Page
+
+* TODO Plant Page
+* TODO Search plants with autocomplete
+* TODO Category Filter
+* TODO Go back button on title
+* TODO Paginate Discover new plants
+* TODO fix title on top

@@ -27,6 +27,17 @@ const routes = [
     }
   },
   {
+    path: "/plant/info/:id",
+    name: "PlantsInfo",
+    component: () =>
+      import(
+        /* webpackChunkName: "plants-info" */ "../components/pages/PPlantsInfo.vue"
+      ),
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
     path: "/auth",
     name: "Auth",
     component: () =>
