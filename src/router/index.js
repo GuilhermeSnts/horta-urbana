@@ -19,24 +19,47 @@ const routes = [
     path: "/plants",
     name: "Plants",
     component: () =>
-      import(
-        /* webpackChunkName: "plants" */ "../components/pages/PPlants.vue"
-      ),
+      import(/* webpackChunkName: "index" */ "../components/pages/PPlants"),
     meta: {
       requiresAuth: true
-    }
+    },
+    children: [
+      {
+        path: "",
+        name: "PlantsInfo",
+        component: () =>
+          import(
+            /* webpackChunkName: "plants-main" */ "../components/pages/PPlants/PPlantsMain.vue"
+          ),
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: "info/:id",
+        name: "PlantsInfo",
+        component: () =>
+          import(
+            /* webpackChunkName: "plant-bio" */ "../components/pages/PPlants/PPlantBio.vue"
+          ),
+        meta: {
+          requiresAuth: true
+        }
+      },
+      {
+        path: "category/:category",
+        name: "PlantsCategory",
+        component: () =>
+          import(
+            /* webpackChunkName: "plants-category" */ "../components/pages/PPlants/PPlantsCategory.vue"
+          ),
+        meta: {
+          requiresAuth: true
+        }
+      }
+    ]
   },
-  {
-    path: "/plant/info/:id",
-    name: "PlantsInfo",
-    component: () =>
-      import(
-        /* webpackChunkName: "plants-info" */ "../components/pages/PPlantsInfo.vue"
-      ),
-    meta: {
-      requiresAuth: true
-    }
-  },
+
   {
     path: "/auth",
     name: "Auth",

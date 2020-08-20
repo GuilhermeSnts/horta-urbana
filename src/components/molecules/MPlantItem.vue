@@ -20,7 +20,7 @@ export default {
 
   methods: {
     goTo(id) {
-      this.$router.push("plant/info/" + id);
+      this.$router.push("/plants/info/" + id);
     }
   },
 

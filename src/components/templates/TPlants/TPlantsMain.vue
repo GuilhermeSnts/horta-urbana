@@ -12,15 +12,15 @@
 </template>
 
 <script>
-import APage from "../atoms/APage";
-import ATitle from "../atoms/ATitle";
-import OPlantList from "../organisms/OPlantList";
-import OSearchPlant from "../organisms/OSearchPlant";
-import MHorizontalMenu from "../molecules/MHorizontalMenu";
-import MSearch from "../molecules/MSearch";
+import APage from "@/components/atoms/APage";
+import ATitle from "@/components/atoms/ATitle";
+import OPlantList from "@/components/organisms/OPlantList";
+import OSearchPlant from "@/components/organisms/OSearchPlant";
+import MHorizontalMenu from "@/components/molecules/MHorizontalMenu";
+import MSearch from "@/components/molecules/MSearch";
 
 export default {
-  name: "TDashboard",
+  name: "TPlantsMain",
 
   components: {
     APage,

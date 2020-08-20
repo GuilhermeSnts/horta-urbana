@@ -1,10 +1,10 @@
 <template lang="pug">
-  t-plant-info( :backgroundUrl="backgroundUrl", :plant="plant")
+  t-plant-bio( :backgroundUrl="backgroundUrl", :plant="plant")
 
 </template>
 
 <script>
-import TPlantInfo from "../templates/TPlantInfo.vue";
+import TPlantBio from "@/components/templates/TPlants/TPlantBio.vue";
 import backgroundUrl from "@/assets/bg3.jpg";
 import { mapActions } from "vuex";
 
@@ -36,7 +36,7 @@ export default {
   },
 
   components: {
-    TPlantInfo
+    TPlantBio
   }
 };
 </script>

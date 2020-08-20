@@ -9,8 +9,7 @@
 
     a-card
       div
-        span
-          .icon.mdi(class="mdi-sun") 
+        span light
         span {{ plant.main_species.growth.light }}
       div
         span Soil Nutriments: 
@@ -26,13 +25,13 @@
 </template>
 
 <script>
-import APage from "../atoms/APage";
-import ATitle from "../atoms/ATitle";
-import AImage from "../atoms/AImage";
-import ACard from "../atoms/ACard";
+import APage from "@/components/atoms/APage";
+import ATitle from "@/components/atoms/ATitle";
+import AImage from "@/components/atoms/AImage";
+import ACard from "@/components/atoms/ACard";
 
 export default {
-  name: "TPlantInfo",
+  name: "TPlantBio",
 
   components: {
     APage,
