@@ -1,5 +1,5 @@
 <template lang="pug">
-    .a-card(@click="$emit('click')")
+    .a-card( :class="'mode-'+mode" @click="$emit('click')")
       .title(v-if="$slots.title")
         slot( name="title")
       slot
@@ -7,7 +7,13 @@
 
 <script>
 export default {
-  name: "ACard"
+  name: "ACard",
+  props: {
+    mode: {
+      default: "elevated",
+      type: String
+    }
+  }
 };
 </script>
 
@@ -17,14 +23,19 @@ export default {
   width: 100%
   height: auto
   padding: 20px
-  border: 1px solid grey
-  border-radius: 20px
-  background: $white
-  box-shadow: 0px 10px 10px $black-transparent
   .title
     margin-top: 10px
     margin-bottom: 50px
     font-weight: bold
     font-size: 1em
     font-family: 'Merriweather', serif
+.mode-elevated
+  border: 1px solid grey
+  border-radius: 20px
+  background: $white
+  box-shadow: 0px 10px 10px $black-transparent
+.mode-flat
+  border: 1px solid grey
+  border-radius: 20px
+  background: $white
 </style>
