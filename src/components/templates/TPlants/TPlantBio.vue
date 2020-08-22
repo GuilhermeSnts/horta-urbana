@@ -7,7 +7,7 @@
 
     a-title(size="subtitle") Growth
 
-    a-card
+    a-card( mode="flat")
       div
         span light
         span {{ plant.main_species.growth.light }}
@@ -20,12 +20,14 @@
         span {{ plant.main_species.growth.ph_minimum }}
       div
         span Bloom Months: 
-        span {{ plant.main_species.growth.bloom_months }}
+        span(v-for="month in plant.main_species.growth.bloom_months" :key="month")
+          a-tag {{month}}
       
 </template>
 
 <script>
 import APage from "@/components/atoms/APage";
+import ATag from "@/components/atoms/ATag";
 import ATitle from "@/components/atoms/ATitle";
 import AImage from "@/components/atoms/AImage";
 import ACard from "@/components/atoms/ACard";
@@ -37,7 +39,8 @@ export default {
     APage,
     ATitle,
     AImage,
-    ACard
+    ACard,
+    ATag
   },
 
   props: {
